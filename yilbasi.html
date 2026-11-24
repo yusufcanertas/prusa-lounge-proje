@@ -1,0 +1,184 @@
+<!DOCTYPE html> <!-- Tarayiciya html5 oldugunu bildirme -->
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Turkce karakterler bozulmasin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ekran ölçekleme -->
+    <title>Yılbaşı Özel | PRUSA Lounge & Bistro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Montserrat:wght@300;400;500;600&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- css dosya bağlama -->
+</head>
+<body>
+
+    <!-- Kar yagisi efekti icin sayfa ustu cizim katmani -->
+    <canvas id="kar-alani"></canvas> <!-- Kar için alan -->
+
+    <!-- Ust menu alani -->
+    <nav class="ust-menu">
+        <a href="index.html" class="logo-link"> <!-- logoya basınca ana sayfa -->
+            <img src="images/logop.png" alt="PRUSA Lounge & Bistro">
+        </a>
+
+        <ul class="menu-linkleri">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="yilbasi.html" class="aktif">Yılbaşı Özel</a></li> <!-- şuan bu sayfa -->
+            <li><a href="rezervasyon.html">Rezervasyon</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- yılbaşı özel başlık -->
+    <header class="yilbasi-baslik"> <!-- borda geçişli kısım -->
+        <span class="yilbasi-etiket">31 ARALIK GALA GECESİ</span>
+        <h1>Yeni Yıla PRUSA’da Merhaba Deyin</h1>
+        <p>Yılbaşına özel hazırlanan gala menümüz ve gece boyu sürecek canlı müzik programıyla keyifli bir yılbaşı gecesi.</p>
+    </header>
+
+    <!-- yılbaşı menü tasarım fotosu -->
+    <section class="yilbasi-menu-bolumu"> <!-- görselin oldugu yer -->
+        <div class="yilbasi-kutu"> <!-- fotonun kutusu -->
+            <div class="yilbasi-bolum-baslik">
+                <span>ÖZEL MENÜ</span>
+                <h2>Yılbaşı Gala Menüsü</h2>
+            </div>
+
+            <div class="yilbasi-afis-cerceve"> <!-- tasarımın çercevesi -->
+                <img src="images/yilbasimenu.png" alt="PRUSA Yılbaşı Özel Gala Menüsü">
+            </div>
+        </div>
+    </section>
+
+    <!-- gecenin planı -->
+    <section class="yilbasi-etkinlik-bolumu"> <!-- gecenin planı arka plan --> 
+        <div class="yilbasi-kutu">
+            <div class="yilbasi-bolum-baslik">
+                <span>GECE AKIŞI</span>
+                <h2>Yılbaşı Etkinlik Programı</h2>
+            </div>
+
+            <!-- Saat saat etkinlik akisi -->
+            <div class="etkinlik-listesi"> <!-- tüm saat satırlarını alt alta -->
+                <div class="etkinlik-satir">
+                    <span class="etkinlik-saat">20:00</span>
+                    <div class="etkinlik-bilgi">
+                        <h3>Karşılama &amp; Akustik Dinleti</h3>
+                        <p>Karşılama ikramları eşliğinde piyano ve saksafon dinletisi.</p>
+                    </div>
+                </div>
+            <!-- Yemek servisi -->
+                <div class="etkinlik-satir">
+                    <span class="etkinlik-saat">21:30</span>
+                    <div class="etkinlik-bilgi">
+                        <h3>Yılbaşı Gala Yemeği</h3>
+                        <p>31 Aralık gecesine özel hazırlanan yılbaşı menüsü servisi.</p>
+                    </div>
+                </div>
+            <!-- Canli muzik sahnesi -->
+                <div class="etkinlik-satir">
+                    <span class="etkinlik-saat">22:45</span>
+                    <div class="etkinlik-bilgi">
+                        <h3>Sürpriz Sanatçı Sahnesi</h3>
+                        <p>Konuk sanatçı performansı ile gece boyu sürecek canlı müzik programı.</p>
+                    </div>
+                </div>
+            <!-- Cekilis -->
+                <div class="etkinlik-satir">
+                    <span class="etkinlik-saat">23:30</span>
+                    <div class="etkinlik-bilgi">
+                        <h3>PRUSA Yılbaşı Çekilişi</h3>
+                        <p>Geceye katılan misafirlerimiz arasında yapılacak çekilişle akşam yemeği ve sürpriz hediye paketleri.</p>
+                    </div>
+                </div>
+            <!-- Gece sonrasi -->
+                <div class="etkinlik-satir">
+                    <span class="etkinlik-saat">00:00</span>
+                    <div class="etkinlik-bilgi">
+                        <h3>Yeni Yıl Karşılaması DJ Performansı</h3>
+                        <p>Yeni yıl geri sayımının ardından saat 02:00’ye kadar sürecek DJ performansı.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rezervasyon yonlendirme butonu -->
+            <div class="yilbasi-alt-buton"> <!-- metin ve rezervasyon linkini ortala -->
+                <p>Sınırlı sayıda masa kontenjanımız için erken rezervasyon yaptırabilirsiniz.</p>
+                <a href="rezervasyon.html" class="altin-buton">Yılbaşı Masanızı Ayırtın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alt bilgi alani -->
+    <footer class="alt-bilgi">
+        <div class="alt-icerik"> <!-- yan yana sutun-->
+            <div class="alt-marka">
+                <span class="alt-baslik-marka">PRUSA LOUNGE BISTRO</span>
+                <p>Bademli Mh., Mudanya / Bursa</p>
+            </div>
+            <div class="alt-saatler">
+                <span>YILBAŞI GECESİ</span>
+                <p>31 Aralık: 20:00 – 02:00</p>
+            </div>
+            <div class="alt-telif">
+                <p>2026 PRUSA Lounge Bistro — Web Programlama Dersi Proje Çalışmasıdır. Kurgusal Markadır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Kar animasyon JavaScript var -->
+    <script>
+        var tuval = document.getElementById("kar-alani");
+        var cizim = tuval.getContext("2d");
+
+        // Tuval boyutunu tarayici penceresine esitle
+        var genislik = tuval.width = window.innerWidth;
+        var yukseklik = tuval.height = window.innerHeight;
+
+        // Pencere boyutu degisirse tuvali guncelle
+        window.addEventListener("resize", function () {
+            genislik = tuval.width = window.innerWidth;
+            yukseklik = tuval.height = window.innerHeight;
+        });
+
+        // Kar tanelerini tutan dizi ve toplam sayi
+        var karTaneleri = [];
+        var taneSayisi = 85;
+
+        // Her kar tanesi icin rastgele konum, boyut ve hiz olustur
+        for (var i = 0; i < taneSayisi; i++) {
+            karTaneleri.push({
+                x: Math.random() * genislik,
+                y: Math.random() * yukseklik,
+                yaricap: Math.random() * 3 + 1,
+                hiz: Math.random() * 1.5 + 0.5,
+                saydamlik: Math.random() * 0.6 + 0.3
+            });
+        }
+
+        // Kar tanelerini ekrana cizen ve hareket ettiren dongu
+        function karCiz() {
+            cizim.clearRect(0, 0, genislik, yukseklik);
+
+            for (var i = 0; i < karTaneleri.length; i++) {
+                var tane = karTaneleri[i];
+                cizim.beginPath();
+                cizim.arc(tane.x, tane.y, tane.yaricap, 0, Math.PI * 2);
+                cizim.fillStyle = "rgba(255, 255, 255, " + tane.saydamlik + ")";
+                cizim.fill();
+
+                tane.y += tane.hiz;
+
+                // Ekrandan cikan kar tanesini tekrar ustten baslat
+                if (tane.y > yukseklik) {
+                    tane.y = -5;
+                    tane.x = Math.random() * genislik;
+                }
+            }
+
+            requestAnimationFrame(karCiz);
+        }
+
+        karCiz();
+    </script>
+</body>
+</html>

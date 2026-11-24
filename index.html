@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!-- Tarayiciya html5 oldugunu bildirme -->
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Turkce karakterlerin bozulmamasi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ekran ölçekleme -->
+    <title>PRUSA Lounge & Bistro</title> <!-- Site basligi -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Montserrat:wght@300;400;500;600&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- css dosya baglama -->
+</head>
+<body>
+
+    <!-- Ust menu alani -->
+    <nav class="ust-menu">
+        <a href="index.html" class="logo-link"> <!-- Logoya basinca ana sayfa -->
+            <img src="images/logop.png">
+        </a>
+        <!-- Sayfa gecis linkleri -->
+        <ul class="menu-linkleri">
+            <li><a href="index.html" class="aktif">Ana Sayfa</a></li> <!-- şuan bu sayfa -->
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="yilbasi.html">Yılbaşı Özel</a></li>
+            <li><a href="rezervasyon.html">Rezervasyon</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- Ana sayfa karsilama ekrani -->
+    <section class="karsilama-alani"> <!-- Arka plan -->
+        <div class="karartma-katmani"></div> 
+        <div class="karsilama-icerik"> <!-- Ortadaki baslik buton -->
+            <span class="alt-baslik">BURSA</span> 
+            <h1>Gelenekten İlham Alan<br>Modern Gastronomi</h1>
+            <div class="karsilama-butonlar"> <!-- Yonlendirme butonu yan yana -->
+                <a href="menu.html" class="altin-buton">Menüyü İncele</a>
+                <a href="rezervasyon.html" class="cerceve-buton">Rezervasyon Yap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUTFAK FELSEFESI -->
+    <section class="hakkimizda-onizleme">
+        <div class="hakkimizda-kutu"> <!-- Yazi ve resim yanyana -->
+            <div class="hakkimizda-yazi"> <!-- Tanitim yazisi -->
+                <span class="bolum-etiketi">MUTFAK FELSEFEMİZ</span>
+                <h2>Bursa’nın Köklü Mirası,<br>Çağdaş Bir Yorum</h2>
+                <p>
+                    Adını Bursa’nın antik kimliği Prusa’dan alan mutfağımızda, yerel üreticilerden özenle seçilen mevsimsel ürünleri modern gastronomi teknikleriyle buluşturuyoruz.
+                </p>
+                <p>
+                    Odun ateşinin doğal dokunuşu, yavaş pişirme yöntemleri ve özenle hazırlanan soslarla her tabakta dengeli bir lezzet hikayesi sunuyoruz.
+                </p>
+                <p>
+                    Sade sunumlar, seçkin mahzen eşleşmeleri ve sıcak bir atmosfer eşliğinde her akşamı unutulmaz bir sofraya dönüştürüyoruz.
+                </p>
+                <a href="hakkimizda.html" class="metin-linki">Hikayemizi Keşfedin →</a>
+            </div>
+            <div class="hakkimizda-resim"> <!-- restoran gorsel -->
+                <img src="images/anasayfa2.png" alt="PRUSA Mutfak Felsefesi">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video kismi -->
+    <section class="atmosfer-alani">
+        <video class="atmosfer-video" autoplay loop muted playsinline>
+            <source src="images/mutfakk.mp4" type="video/mp4">
+        </video>
+        <div class="atmosfer-karartma"></div>
+        <div class="atmosfer-icerik">
+            <span>GASTRONOMİ  ATMOSFER</span>
+            <h2>Her Detayda Zarafet, Her Tabakta Bir Hikaye</h2>
+        </div>
+    </section>
+
+    <!-- Ana Sayfa Iletisim -->
+    <section class="iletisim-bolumu"> <!-- Iletisim arka plan cerceve -->
+        <div class="iletisim-kutu"> <!-- formu ortaya sayfanin -->
+            <h2>Bize Ulaşın</h2>
+            <p class="iletisim-bilgi">INFO@PRUSABISTRO-PROJE.COM    TEL: +90 (000) 000 16 16</p>
+            <div class="iletisim-cizgi"></div> <!-- Baslik ile aciklama arasi  cizgi -->
+            <p class="iletisim-aciklama"> <!-- mesaj gonderme  aciklama -->
+                Özel davetler, grup organizasyonları veya menümüz hakkında merak ettikleriniz için bizimle iletişime geçebilirsiniz.
+            </p>
+        <!-- action: form gonderilince gidilecek sayfa -->
+            <form action="iletisim.html" class="iletisim-formu" onsubmit="alert('Mesajınız alınmıştır. En kısa sürede dönüş yapılacaktır.');">
+               <div class="form-satir"> <!-- ad soyad yanyana -->
+                    <div class="form-grup">
+                        <label for="ad">Adınız *</label> <!-- ada tıklayınca aktif eder -->
+                        <input type="text" id="ad" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="soyad">Soyadınız *</label>
+                        <input type="text" id="soyad" required> <!-- zorunlu doldurma -->
+                    </div>
+                </div>
+
+                <div class="form-satir">
+                    <div class="form-grup">
+                        <label for="eposta">E-posta Adresiniz *</label>
+                        <input type="email" id="eposta" required> <!-- e-posta formatı kontrolü -->
+                    </div>
+                    <div class="form-grup">
+                        <label for="konu">Konu *</label>
+                        <input type="text" id="konu" required>
+                    </div>
+                </div>
+
+                <div class="form-satir form-alt-satir">
+                    <div class="form-grup">
+                        <label for="mesaj">Mesajınız *</label>
+                        <textarea id="mesaj" rows="4" required></textarea> <!-- çok satırlı mesaj alanı -->
+                    </div>
+                    <div class="form-grup form-buton-alani">
+                        <button type="submit" class="gonder-butonu">Gönder</button> <!-- formu gönderen buton -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Alt bilgi kismi -->
+    <footer class="alt-bilgi">
+        <div class="alt-icerik"> <!-- Sutunu yanyana -->
+            <div class="alt-marka"> <!-- sol taraf -->
+                <span class="alt-baslik-marka">PRUSA LOUNGE BISTRO</span>
+                <p>Bademli Mh., Mudanya / Bursa</p>
+            </div>
+            <div class="alt-saatler">
+                <span>ÇALIŞMA SAATLERİ</span>
+                <p>Çarşamba-Pazar: 15:00 – 02:00</p>
+            </div>
+            <div class="alt-telif">
+                <p>2026 PRUSA Lounge Bistro — Web Programlama Dersi Proje Çalışmasıdır. Kurgusal Markadır.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

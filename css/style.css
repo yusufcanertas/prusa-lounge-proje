@@ -1,0 +1,727 @@
+/* Genel sayfa sifirlama ve varsayilan yazi tipi ayarlari */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* genel yazi tipi ve yedek fontlar */
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+/* üst menü */
+.ust-menu {
+    background-color: #000000; /* siyah arka plan */
+    height: 90px; /* menü yüksekliği */
+    padding: 0 60px; /* sağ ve soldan iç boşluk */
+    display: flex; /* Logo ve linkleri yan yana */
+    align-items: center; /* dikey ortala */
+    justify-content: space-between; /* logo sola linkler sağa */
+    border-bottom: 1px solid #1a1a1a; /* alt kısma ince çizgi */
+}
+
+.logo-link img {
+    height: 85px;
+    width: auto;
+    display: block;
+}
+
+.menu-linkleri {
+    list-style: none;
+    display: flex; /* linkleri yan yana dizer */
+    gap: 38px;
+}
+
+.menu-linkleri a {
+    font-family: 'Questrial', sans-serif;
+    text-decoration: none; /* alt cizgiyi kaldir */
+    color: #e8e6e1;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.menu-linkleri a:hover,
+.menu-linkleri a.aktif {
+    color: #c5a880; /* aktif veya uzerine gelinen link altin rengi */
+}
+
+/* --- ANA SAYFA KARSILAMA EKRANI --- */
+.karsilama-alani {
+    position: relative;
+    height: calc(100vh - 90px); /* tam ekran yukseklik eksi ust menu */
+    background-image: url('../images/anafoto.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* arka plan fotosunu hafif karartma */
+.karartma-katmani {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.42) 50%,
+        rgba(0, 0, 0, 0.78) 100%
+    );
+    z-index: 1;
+}
+
+.karsilama-icerik {
+    position: relative;
+    z-index: 2; /* yazilar karartmanin ustunde kalsin */
+    max-width: 850px;
+}
+
+.alt-baslik {
+    display: inline-block;
+    color: #c5a880;
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.karsilama-icerik h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 38px;
+    letter-spacing: 2px;
+    color: #f8f6f2;
+}
+
+.karsilama-butonlar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Fildisi Beyazi Buton */
+.altin-buton {
+    font-family: 'Questrial', sans-serif;
+    background-color: #f5f2eb;
+    color: #111111;
+    padding: 15px 36px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    border: 1px solid #f5f2eb;
+    transition: all 0.3s ease;
+}
+
+.altin-buton:hover {
+    background-color: transparent;
+    color: #f5f2eb;
+}
+
+/* Ince Cerceveli Buton */
+.cerceve-buton {
+    font-family: 'Questrial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f5f2eb;
+    padding: 15px 36px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    border: 1px solid rgba(245, 242, 235, 0.55);
+    transition: all 0.3s ease;
+}
+
+.cerceve-buton:hover {
+    background-color: #f5f2eb;
+    color: #111111;
+    border-color: #f5f2eb;
+}
+
+/* --- MUTFAK FELSEFESI VE HAKKIMIZDA BOLUMU --- */
+.hakkimizda-onizleme {
+    background-color: #f7f5f0;
+    padding: 110px 60px;
+}
+
+.hakkimizda-kutu {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex; /* yazi ve foto yan yana */
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.hakkimizda-yazi {
+    flex: 1.1;
+}
+
+.bolum-etiketi {
+    display: inline-block;
+    color: #9c7a4c;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.hakkimizda-yazi h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #181818;
+    margin-bottom: 24px;
+    letter-spacing: 0.8px;
+}
+
+.hakkimizda-yazi p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #55534e;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.metin-linki {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'Questrial', sans-serif;
+    color: #181818;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #9c7a4c;
+    transition: color 0.3s ease;
+}
+
+.metin-linki:hover {
+    color: #9c7a4c;
+}
+
+.hakkimizda-resim {
+    flex: 0.9;
+}
+
+.hakkimizda-resim img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover; /* fotoyu bozmadan kutuya sigdirir */
+    display: block;
+}
+
+/* --- ARA ATMOSFER VIDEOSU --- */
+.atmosfer-alani {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.atmosfer-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.atmosfer-karartma {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 1;
+}
+
+.atmosfer-icerik {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.atmosfer-icerik span {
+    display: inline-block;
+    color: #c5a880;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.atmosfer-icerik h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: #f8f6f2;
+    letter-spacing: 1.5px;
+    line-height: 1.35;
+}
+
+/* --- ILETISIM VE REZERVASYON FORM ALANI --- */
+.iletisim-bolumu {
+    background-color: #f7f5f0;
+    padding: 100px 40px 110px;
+    color: #181818;
+}
+
+.iletisim-kutu {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iletisim-kutu h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #2b2a27;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.iletisim-bilgi {
+    font-family: 'Questrial', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    color: #6b6860;
+    margin-bottom: 24px;
+}
+
+.iletisim-cizgi {
+    width: 55px;
+    height: 1px;
+    background-color: #b5a998;
+    margin: 0 auto 24px;
+}
+
+.iletisim-aciklama {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #6b6860;
+    max-width: 540px;
+    margin: 0 auto 48px;
+    font-weight: 400;
+}
+
+.iletisim-formu {
+    text-align: left;
+}
+
+.form-satir {
+    display: flex; /* form kutularini yan yana dizer */
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.form-grup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grup label {
+    font-family: 'Questrial', sans-serif;
+    font-size: 13px;
+    color: #4a4843;
+    margin-bottom: 8px;
+    letter-spacing: 0.4px;
+}
+
+/* form input, secim ve mesaj kutulari */
+.form-grup input,
+.form-grup select,
+.form-grup textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #c8c3b8;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #181818;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.form-grup input:focus,
+.form-grup select:focus,
+.form-grup textarea:focus {
+    border-color: #9c7a4c; /* kutuya tiklaninca kenarlik altin rengi */
+}
+
+.form-alt-satir {
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.form-buton-alani {
+    padding-top: 23px;
+}
+
+.gonder-butonu {
+    width: 100%;
+    height: 44px;
+    background-color: #636059;
+    color: #f7f5f0;
+    border: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gonder-butonu:hover {
+    background-color: #181818;
+}
+
+/* --- ALT BILGI (FOOTER) --- */
+.alt-bilgi {
+    background-color: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+    padding: 45px 60px;
+}
+
+.alt-icerik {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.alt-baslik-marka {
+    display: block;
+    font-family: 'Questrial', sans-serif;
+    color: #c5a880;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    margin-bottom: 6px;
+}
+
+.alt-saatler span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8c8a84;
+    margin-bottom: 6px;
+}
+
+.alt-icerik p {
+    font-size: 13px;
+    color: #a8a6a1;
+    font-weight: 300;
+}
+
+/* --- ALT SAYFA UST BASLIK ALANI --- */
+.sayfa-baslik {
+    background-color: #0a0a0a;
+    padding: 85px 20px 75px;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.sayfa-baslik span {
+    display: inline-block;
+    color: #c5a880;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 14px;
+    font-weight: 400;
+}
+
+.sayfa-baslik h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    color: #f8f6f2;
+    letter-spacing: 2px;
+}
+
+.sayfa-baslik p {
+    font-size: 14px;
+    color: #a8a6a1;
+    margin-top: 14px;
+    font-weight: 300;
+}
+
+/* --- MENU SAYFASI STILLERI --- */
+.menu-bolumu {
+    background-color: #f7f5f0;
+    padding: 90px 40px 110px;
+    color: #181818;
+}
+
+.menu-kutu {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.menu-kategori {
+    margin-bottom: 85px;
+}
+
+.menu-kategori:last-child {
+    margin-bottom: 0;
+}
+
+.kategori-baslik {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.kategori-baslik h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.kategori-baslik p {
+    font-size: 14px;
+    color: #6b6860;
+    font-weight: 400;
+}
+
+.menu-listesi {
+    border-top: 1px solid #d6d1c7;
+}
+
+.menu-ogesi {
+    padding: 24px 0;
+    border-bottom: 1px solid #d6d1c7;
+}
+
+.menu-oge-ust {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 8px;
+}
+
+.yemek-adi {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #181818;
+    font-weight: 400;
+}
+
+.yemek-aciklama {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6b6860;
+    max-width: 660px;
+    font-weight: 400;
+}
+
+/* --- PRUSA FIX MENU KUTUSU --- */
+.fiks-menu-kutu {
+    margin-top: 0;
+    margin-bottom: 85px;
+    padding: 55px 45px;
+    border: 1px solid #9c7a4c;
+    background-color: #f2efe8;
+    text-align: center;
+}
+
+.fiks-menu-kutu h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.fiks-alt-baslik {
+    font-size: 14px;
+    color: #6b6860;
+    margin-bottom: 34px;
+}
+
+.fiks-icerik {
+    max-width: 640px;
+    margin: 0 auto;
+    border-top: 1px solid #d6d1c7;
+    border-bottom: 1px solid #d6d1c7;
+    padding: 24px 0;
+}
+
+.fiks-icerik p {
+    font-size: 14px;
+    color: #3a3834;
+    line-height: 2.2;
+}
+
+.fiks-icerik strong {
+    font-family: 'Questrial', sans-serif;
+    color: #9c7a4c;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* --- YILBASI OZEL SAYFASI & KAR EFEKTI --- */
+#kar-alani {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* alttaki linklere tiklamayi engellemez */
+    z-index: 9999;
+}
+
+.yilbasi-baslik {
+    background: radial-gradient(circle at top, #2a0c10 0%, #0d0909 65%, #0a0a0a 100%);
+    padding: 95px 20px 85px;
+    text-align: center;
+    border-bottom: 1px solid #2c1e1e;
+}
+
+.yilbasi-etiket {
+    display: inline-block;
+    color: #c5a880;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.yilbasi-baslik h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 46px;
+    font-weight: 300;
+    color: #f8f6f2;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.yilbasi-baslik p {
+    font-size: 15px;
+    color: #c9c3b8;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.yilbasi-kutu {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.yilbasi-bolum-baslik {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.yilbasi-bolum-baslik span {
+    display: inline-block;
+    color: #c5a880;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.yilbasi-bolum-baslik h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #f8f6f2;
+    letter-spacing: 1.5px;
+}
+
+/* Yilbasi Menu Afis Cercevesi */
+.yilbasi-menu-bolumu {
+    background-color: #0d0a0a;
+    padding: 85px 20px;
+    border-bottom: 1px solid #1f1717;
+}
+
+.yilbasi-afis-cerceve {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 14px;
+    border: 1px solid #c5a880;
+    background-color: #140f0f;
+}
+
+.yilbasi-afis-cerceve img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Yilbasi Etkinlik Akisi */
+.yilbasi-etkinlik-bolumu {
+    background: linear-gradient(to bottom, #140a0c 0%, #0a0a0a 100%);
+    padding: 90px 20px 100px;
+}
+
+.etkinlik-listesi {
+    border-top: 1px solid #2b2020;
+    margin-bottom: 55px;
+}
+
+.etkinlik-satir {
+    display: flex; /* saat solda etkinlik aciklamasi sagda */
+    align-items: flex-start;
+    gap: 35px;
+    padding: 28px 0;
+    border-bottom: 1px solid #2b2020;
+}
+
+.etkinlik-saat {
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+    color: #c5a880;
+    letter-spacing: 1.5px;
+    min-width: 75px;
+    padding-top: 2px;
+}
+
+.etkinlik-bilgi h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #f8f6f2;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.etkinlik-bilgi p {
+    font-size: 14px;
+    color: #b5afa6;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.yilbasi-alt-buton {
+    text-align: center;
+}
+
+.yilbasi-alt-buton p {
+    font-size: 14px;
+    color: #b5afa6;
+    margin-bottom: 24px;
+}

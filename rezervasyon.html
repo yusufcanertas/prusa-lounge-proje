@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!-- Tarayiciya html5 oldugunu bildirme -->
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Turkce karakter bozulmasin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervasyon | PRUSA Lounge & Bistro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Montserrat:wght@300;400;500;600&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ust menu alani -->
+    <nav class="ust-menu">
+        <a href="index.html" class="logo-link"> <!-- Logoyu sola linkleri saga -->
+            <img src="images/logop.png">
+        </a>
+
+        <!-- Sayfa gecis linkleri -->
+        <ul class="menu-linkleri">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="yilbasi.html">Yılbaşı Özel</a></li>
+            <li><a href="rezervasyon.html" class="aktif">Rezervasyon</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rezervasyon form alani -->
+    <section class="iletisim-bolumu">
+        <div class="iletisim-kutu">
+            <h2>Rezervasyon</h2>
+            <p class="iletisim-bilgi">ÇARŞAMBA-PAZAR: 15:00 – 02:00 TEL: +90 (000) 000 16 16</p>
+            <div class="iletisim-cizgi"></div> <!--ayirici cizgi -->
+            <p class="iletisim-aciklama">
+                Akşam yemeği veya yılbaşı gala gecesi için masanızı önceden ayırtabilirsiniz.
+            </p>
+
+            <form action="rezervasyon.html" class="iletisim-formu" onsubmit="alert('Rezervasyon talebiniz alınmıştır. En kısa sürede dönüş yapılacaktır.');">
+                <div class="form-satir"> <!-- Iki kutuyu yan yana tutan satir -->
+                    <div class="form-grup">
+                        <label for="ad">Adınız *</label>
+                        <input type="text" id="ad" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="soyad">Soyadınız *</label>
+                        <input type="text" id="soyad" required>
+                    </div>
+                </div>
+
+                <div class="form-satir">
+                    <div class="form-grup">
+                        <label for="telefon">Telefon Numaranız *</label>
+                        <input type="tel" id="telefon" required> <!-- Telefon numarasi giris alani -->
+                    </div>
+                    <div class="form-grup">
+                        <label for="kisi">Kişi Sayısı *</label>
+                        <!-- Acilir secim listesi -->
+                        <select id="kisi" required>
+                            <option value="" disabled selected>Seçiniz</option>
+                            <option value="1 Kişi">1 Kişi</option>
+                            <option value="2 Kişi">2 Kişi</option>
+                            <option value="3 Kişi">3 Kişi</option>
+                            <option value="4 Kişi">4 Kişi</option>
+                            <option value="5 Kişi">5 Kişi</option>
+                            <option value="6+ Kişi">6+ Kişi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-satir">
+                    <div class="form-grup">
+                        <label for="tarih">Tarih *</label>
+                        <input type="date" id="tarih" required> <!-- Takvim secici kutusu -->
+                    </div>
+                    <div class="form-grup">
+                        <label for="saat">Saat *</label>
+                        <select id="saat" required>
+                            <option value="" disabled selected>Seçiniz</option>
+                            <option value="15:00">15:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00 (Yılbaşı Gala)</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:30">22:30</option>
+                            <option value="00:00">00:00 (Lounge)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-satir form-alt-satir">
+                    <div class="form-grup">
+                        <label for="not">Özel Notunuz</label>
+                        <textarea id="not" rows="4" placeholder="Masa tercihi, özel gün kutlaması veya alerji notu..."></textarea>
+                    </div>
+                    <div class="form-grup form-buton-alani">
+                        <button type="submit" class="gonder-butonu">Rezervasyon Yap</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Alt bilgi alani -->
+    <footer class="alt-bilgi">
+        <div class="alt-icerik">
+            <div class="alt-marka">
+                <span class="alt-baslik-marka">PRUSA LOUNGE BISTRO</span>
+                <p>Bademli Mh., Mudanya / Bursa</p>
+            </div>
+            <div class="alt-saatler">
+                <span>ÇALIŞMA SAATLERİ</span>
+                <p>Çarşamba-Pazar: 15:00 – 02:00</p>
+            </div>
+            <div class="alt-telif">
+                <p>2026 PRUSA Lounge Bistro — Web Programlama Dersi Proje Çalışmasıdır. Kurgusal Markadır.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

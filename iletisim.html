@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- Tarayiciya html5 oldugunu bildirme -->
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Turkce karakterler bozulmasin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUSA Lounge & Bistro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Montserrat:wght@300;400;500;600&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ust menu alani -->
+    <nav class="ust-menu">
+        <a href="index.html" class="logo-link">
+            <img src="images/logop.png" alt="PRUSA Lounge & Bistro">
+        </a>
+
+        <ul class="menu-linkleri">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="yilbasi.html">Yılbaşı Özel</a></li>
+            <li><a href="rezervasyon.html">Rezervasyon</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html" class="aktif">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- Alt sayfa ust baslik alani -->
+    <header class="sayfa-baslik">
+        <span class="bolum-etiketi">BİZE ULAŞIN</span>
+        <h1>İletişim</h1>
+        <p>Bademli Mh., Mudanya / Bursa Çarşamba-Pazar: 15:00 – 02:00</p>
+    </header>
+
+    <!-- Iletisim formu bolumu -->
+    <section class="iletisim-bolumu">
+        <div class="iletisim-kutu">
+            <h2>Mesaj Gönderin</h2>
+            <p class="iletisim-bilgi">INFO@PRUSABISTRO-PROJE.COM TEL: +90 (000) 000 16 16</p>
+            <div class="iletisim-cizgi"></div>
+            <p class="iletisim-aciklama">
+                Grup yemekleri, özel etkinlikler veya menümüzle ilgili sorularınız için bize mesaj gönderebilirsiniz.
+            </p>
+
+            <form action="iletisim.html" class="iletisim-formu" onsubmit="alert('Mesajınız alınmıştır. En kısa sürede dönüş yapılacaktır.');">
+                <div class="form-satir">
+                    <div class="form-grup">
+                        <label for="ad">Adınız *</label>
+                        <input type="text" id="ad" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="soyad">Soyadınız *</label>
+                        <input type="text" id="soyad" required>
+                    </div>
+                </div>
+
+                <div class="form-satir">
+                    <div class="form-grup">
+                        <label for="eposta">E-posta Adresiniz *</label>
+                        <input type="email" id="eposta" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="konu">Konu *</label>
+                        <input type="text" id="konu" required>
+                    </div>
+                </div>
+
+                <div class="form-satir form-alt-satir">
+                    <div class="form-grup">
+                        <label for="mesaj">Mesajınız *</label>
+                        <textarea id="mesaj" rows="4" required></textarea>
+                    </div>
+                    <div class="form-grup form-buton-alani">
+                        <button type="submit" class="gonder-butonu">Gönder</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Alt bilgi alani -->
+    <footer class="alt-bilgi">
+        <div class="alt-icerik">
+            <div class="alt-marka">
+                <span class="alt-baslik-marka">PRUSA LOUNGE BISTRO</span>
+                <p>Bademli Mh., Mudanya / Bursa</p>
+            </div>
+            <div class="alt-saatler">
+                <span>ÇALIŞMA SAATLERİ</span>
+                <p>Çarşamba-Pazar: 15:00 – 02:00</p>
+            </div>
+            <div class="alt-telif">
+                <p>2026 PRUSA Lounge Bistro — Web Programlama Dersi Proje Çalışmasıdır. Kurgusal Markadır.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
