@@ -9,8 +9,6 @@
 </head>
 <body>
 
-    <!-- Kar yagisi efekti icin sayfa ustu cizim katmani -->
-    <canvas id="kar-alani"></canvas> <!-- Kar için alan -->
 
     <!-- Ust menu alani -->
     <nav class="ust-menu">
@@ -125,60 +123,5 @@
         </div>
     </footer>
 
-    <!-- Kar animasyon JavaScript var -->
-    <script>
-        var tuval = document.getElementById("kar-alani");
-        var cizim = tuval.getContext("2d");
-
-        // Tuval boyutunu tarayici penceresine esitle
-        var genislik = tuval.width = window.innerWidth;
-        var yukseklik = tuval.height = window.innerHeight;
-
-        // Pencere boyutu degisirse tuvali guncelle
-        window.addEventListener("resize", function () {
-            genislik = tuval.width = window.innerWidth;
-            yukseklik = tuval.height = window.innerHeight;
-        });
-
-        // Kar tanelerini tutan dizi ve toplam sayi
-        var karTaneleri = [];
-        var taneSayisi = 85;
-
-        // Her kar tanesi icin rastgele konum, boyut ve hiz olustur
-        for (var i = 0; i < taneSayisi; i++) {
-            karTaneleri.push({
-                x: Math.random() * genislik,
-                y: Math.random() * yukseklik,
-                yaricap: Math.random() * 3 + 1,
-                hiz: Math.random() * 1.5 + 0.5,
-                saydamlik: Math.random() * 0.6 + 0.3
-            });
-        }
-
-        // Kar tanelerini ekrana cizen ve hareket ettiren dongu
-        function karCiz() {
-            cizim.clearRect(0, 0, genislik, yukseklik);
-
-            for (var i = 0; i < karTaneleri.length; i++) {
-                var tane = karTaneleri[i];
-                cizim.beginPath();
-                cizim.arc(tane.x, tane.y, tane.yaricap, 0, Math.PI * 2);
-                cizim.fillStyle = "rgba(255, 255, 255, " + tane.saydamlik + ")";
-                cizim.fill();
-
-                tane.y += tane.hiz;
-
-                // Ekrandan cikan kar tanesini tekrar ustten baslat
-                if (tane.y > yukseklik) {
-                    tane.y = -5;
-                    tane.x = Math.random() * genislik;
-                }
-            }
-
-            requestAnimationFrame(karCiz);
-        }
-
-        karCiz();
-    </script>
 </body>
 </html>
